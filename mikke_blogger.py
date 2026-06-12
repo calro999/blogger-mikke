@@ -90,29 +90,33 @@ def generate_article_with_llm(item):
 
     # LLMフォールバック呼び出し
     # 1. Pollinations AI (キー不要)
-    try:
-        print("Attempting to generate article with Pollinations AI...")
-        response = requests.post(
-            "https://text.pollinations.ai/",
-            json={
-                "messages": [
-                    {"role": "system", "content": "あなたはスクイーズ専門のコレクター兼紹介ブロガーです。指示された仕様に完全に従い、前置きやHTMLタグブロックのマークダウン表現などを含めない純粋なHTML本文のみを出力します。"},
-                    {"role": "user", "content": prompt}
-                ],
-                "model": "qwen"
-            },
-            timeout=30
-        )
-        if response.status_code == 200 and len(response.text.strip()) > 100:
-            result = response.text.strip()
-            # もしLLMがマークダウンのコードブロックで囲んでしまった場合はトリミングする
-            if result.startswith("```html"):
-                result = result.split("```html", 1)[1]
-            if result.endswith("```"):
-                result = result.rsplit("```", 1)[0]
-            return result.strip()
-    except Exception as e:
-        print(f"Pollinations AI failed: {e}")
+    pollinations_models = ["openai", "qwen", "mistral"]
+    for model in pollinations_models:
+        try:
+            print(f"Attempting to generate article with Pollinations AI (model: {model})...")
+            response = requests.post(
+                "https://text.pollinations.ai/",
+                json={
+                    "messages": [
+                        {"role": "system", "content": "あなたはスクイーズ専門のコレクター兼紹介ブロガーです。指示された仕様に完全に従い、前置きやHTMLタグブロックのマークダウン表現などを含めない純粋なHTML本文のみを出力します。"},
+                        {"role": "user", "content": prompt}
+                    ],
+                    "model": model
+                },
+                timeout=45
+            )
+            if response.status_code == 200 and len(response.text.strip()) > 100:
+                result = response.text.strip()
+                # もしLLMがマークダウンのコードブロックで囲んでしまった場合はトリミングする
+                if "```html" in result:
+                    result = result.split("```html", 1)[1]
+                if "```" in result:
+                    result = result.split("```", 1)[0]
+                return result.strip()
+        except Exception as e:
+            print(f"Pollinations AI ({model}) failed: {e}")
+            time.sleep(1)
+
 
     # 2. GitHub Models API (GITHUB_TOKENを使用)
     github_token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
