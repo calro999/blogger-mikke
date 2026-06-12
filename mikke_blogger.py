@@ -88,37 +88,7 @@ def generate_article_with_llm(item):
    - 最後にアフィリエイトリンクのボタン（<a>タグでスタイルし、新しいタブで開く target="_blank" rel="noopener noreferrer" を指定。ボタンらしいデザインになるようインラインスタイルを施すこと。例：background-color: #ff6600; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;）
 """
 
-    # LLMフォールバック呼び出し
-    # 1. Pollinations AI (キー不要)
-    pollinations_models = ["openai", "qwen", "mistral"]
-    for model in pollinations_models:
-        try:
-            print(f"Attempting to generate article with Pollinations AI (model: {model})...")
-            response = requests.post(
-                "https://text.pollinations.ai/",
-                json={
-                    "messages": [
-                        {"role": "system", "content": "あなたはスクイーズ専門のコレクター兼紹介ブロガーです。指示された仕様に完全に従い、前置きやHTMLタグブロックのマークダウン表現などを含めない純粋なHTML本文のみを出力します。"},
-                        {"role": "user", "content": prompt}
-                    ],
-                    "model": model
-                },
-                timeout=45
-            )
-            if response.status_code == 200 and len(response.text.strip()) > 100:
-                result = response.text.strip()
-                # もしLLMがマークダウンのコードブロックで囲んでしまった場合はトリミングする
-                if "```html" in result:
-                    result = result.split("```html", 1)[1]
-                if "```" in result:
-                    result = result.split("```", 1)[0]
-                return result.strip()
-        except Exception as e:
-            print(f"Pollinations AI ({model}) failed: {e}")
-            time.sleep(1)
-
-
-    # 2. GitHub Models API (GITHUB_TOKENを使用)
+    # 1. GitHub Models API (GITHUB_TOKENを使用) を最優先
     github_token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if github_token:
         try:
@@ -138,13 +108,47 @@ def generate_article_with_llm(item):
             response = requests.post("https://models.inference.ai.azure.com/chat/completions", headers=headers, json=payload, timeout=30)
             if response.status_code == 200:
                 result = response.json()["choices"][0]["message"]["content"].strip()
-                if result.startswith("```html"):
+                if "```html" in result:
                     result = result.split("```html", 1)[1]
-                if result.endswith("```"):
-                    result = result.rsplit("```", 1)[0]
+                if "```" in result:
+                    result = result.split("```", 1)[0]
                 return result.strip()
+            else:
+                print(f"GitHub Models API returned status code: {response.status_code} - {response.text}")
         except Exception as e:
-            print(f"GitHub Models API failed: {e}")
+            print(f"GitHub Models API failed with exception: {e}")
+    else:
+        print("GITHUB_TOKEN / GH_TOKEN is not set in environment variables.")
+
+    # 2. Pollinations AI (キー不要、フォールバック)
+    pollinations_models = ["openai", "mistral"]
+    for model in pollinations_models:
+        try:
+            print(f"Attempting to generate article with Pollinations AI (model: {model})...")
+            response = requests.post(
+                "https://text.pollinations.ai/",
+                json={
+                    "messages": [
+                        {"role": "system", "content": "あなたはスクイーズ専門のコレクター兼紹介ブロガーです。指示された仕様に完全に従い、前置きやHTMLタグブロックのマークダウン表現などを含めない純粋なHTML本文のみを出力します。"},
+                        {"role": "user", "content": prompt}
+                    ],
+                    "model": model
+                },
+                timeout=45
+            )
+            if response.status_code == 200 and len(response.text.strip()) > 100:
+                result = response.text.strip()
+                if "```html" in result:
+                    result = result.split("```html", 1)[1]
+                if "```" in result:
+                    result = result.split("```", 1)[0]
+                return result.strip()
+            else:
+                print(f"Pollinations AI ({model}) returned status code: {response.status_code} - {response.text[:200]}")
+        except Exception as e:
+            print(f"Pollinations AI ({model}) failed with exception: {e}")
+            time.sleep(1)
+
 
     raise RuntimeError("All LLM generation attempts failed.")
 
