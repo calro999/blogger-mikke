@@ -2,3 +2,4 @@ vt-store:10010222
 auc-toysanta:10370311
 zakkamarche:10015713
 smilekankyo1:10000136
+kinyoshop:10000039
