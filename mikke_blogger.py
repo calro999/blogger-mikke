@@ -18,10 +18,10 @@ def save_to_cache(item_code):
         f.write(f"{item_code}\n")
 
 def fetch_rakuten_item():
-    app_id = os.environ.get("RAKUTEN_APPLICATION_ID")
+    app_id = os.environ.get("RAKUTEN_APP_ID")
     access_key = os.environ.get("RAKUTEN_ACCESS_KEY")
     if not app_id or not access_key:
-        raise ValueError("RAKUTEN_APPLICATION_ID and RAKUTEN_ACCESS_KEY must be set in environment variables.")
+        raise ValueError("RAKUTEN_APP_ID and RAKUTEN_ACCESS_KEY must be set in environment variables.")
 
     attributes = ["キャラクター", "食べ物", "ガチャ", "フルコンプ", "レア", "セット", "マスコット"]
     selected_attribute = random.choice(attributes)
