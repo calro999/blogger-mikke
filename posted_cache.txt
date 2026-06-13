@@ -5,3 +5,4 @@ smilekankyo1:10000136
 kinyoshop:10000039
 backyard:10029297
 backyard-1:10378684
+aoi-depart:10205113
