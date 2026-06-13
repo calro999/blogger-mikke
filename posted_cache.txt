@@ -11,3 +11,4 @@ shinobiya:10051757
 vt-store:10009825
 neighbor111:10010557
 aoi-depart:10205114
+nihontakaragai:10000175
