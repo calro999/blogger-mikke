@@ -12,3 +12,4 @@ vt-store:10009825
 neighbor111:10010557
 aoi-depart:10205114
 nihontakaragai:10000175
+fairy-hama:10006917
