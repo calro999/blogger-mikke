@@ -14,3 +14,4 @@ aoi-depart:10205114
 nihontakaragai:10000175
 fairy-hama:10006917
 kai-shop:10014195
+saitamatoy:10022552
