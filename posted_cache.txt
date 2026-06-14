@@ -24,3 +24,4 @@ aoi-depart:10205111
 ulifeshop:10000223
 auc-toysanta:10323972
 dexstore:10033978
+usplaza:10020156
