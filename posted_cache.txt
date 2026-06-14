@@ -29,3 +29,4 @@ auc-toysanta:10322138
 plata:10015088
 ustoy:10020521
 rainbowbridge:10001647
+seiki-shop:10000155
