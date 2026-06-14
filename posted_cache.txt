@@ -31,3 +31,4 @@ ustoy:10020521
 rainbowbridge:10001647
 seiki-shop:10000155
 mayucyan3801:10000073
+shimataro:10000139
