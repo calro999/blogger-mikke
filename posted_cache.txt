@@ -36,3 +36,4 @@ shimataro:10000411
 teiashopping:10006721
 ustoy:10017934
 gikstore:10001029
+greenocean:10035116
