@@ -52,3 +52,4 @@ sukio:10015846
 ulifeshop:10000339
 kikiplaza:10005098
 children-veteements:10005802
+saitamatoy:10022262
