@@ -69,3 +69,4 @@ realize-store:10308346
 saitamatoy:10019658
 auc-yuyou:10207538
 auc-treasuremarket:10048668
+union-stores:10009170
