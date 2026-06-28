@@ -96,3 +96,4 @@ rainbowbridge:10001710
 shimataro:10000103
 lutella:10002088
 greenocean:10035048
+n2style:10000063
