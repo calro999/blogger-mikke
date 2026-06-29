@@ -100,3 +100,4 @@ n2style:10000063
 yorozuyahonntenn:10024077
 auc-treasuremarket:10044535
 auc-treasuremarket:10037933
+auc-yuyou:10194208
