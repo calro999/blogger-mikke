@@ -106,3 +106,4 @@ fun-and-funny:10008500
 monolith-1:10009841
 akgshop:10015908
 shimataro:10000508
+wasshoi-mura:10021151
