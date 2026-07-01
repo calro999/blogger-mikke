@@ -110,3 +110,4 @@ wasshoi-mura:10021151
 dochoshop:10001713
 sloth-l:10001461
 gacha-samurai:10013593
+rainbowbridge:10001699
