@@ -113,3 +113,4 @@ gacha-samurai:10013593
 rainbowbridge:10001699
 shiraha:10001525
 daikon:10000721
+cleaningeight:10042269
