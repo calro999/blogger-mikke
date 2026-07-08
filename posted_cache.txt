@@ -145,3 +145,4 @@ vivito-shop:14001200
 suns-online-store:10003952
 zsizo:10002949
 rainbowbridge:10001695
+auc-zakka-etcetera:10018451
