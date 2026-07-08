@@ -148,3 +148,4 @@ rainbowbridge:10001695
 auc-zakka-etcetera:10018451
 discount-store-ufi:10006277
 shimataro:10000510
+auc-my-mama:10033046
