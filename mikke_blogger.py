@@ -41,7 +41,7 @@ def fetch_rakuten_item():
     if not app_id or not access_key:
         raise ValueError("RAKUTEN_APP_ID and RAKUTEN_ACCESS_KEY must be set in environment variables.")
 
-    attributes = ["フィギュア", "ガチャ", "フルコンプ", "レア", "セット", "マスコット"]
+    attributes = ["フィギュア", "ガチャ", "メロジョイ", "レア", "セット", "マスコット"]
     selected_attribute = random.choice(attributes)
     keyword = f"スクイーズ {selected_attribute}"
     print(f"Searching Rakuten for keyword: {keyword}")
