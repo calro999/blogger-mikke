@@ -41,7 +41,7 @@ def fetch_rakuten_item():
     if not app_id or not access_key:
         raise ValueError("RAKUTEN_APP_ID and RAKUTEN_ACCESS_KEY must be set in environment variables.")
 
-    attributes = ["キャラクター", "食べ物", "ガチャ", "フルコンプ", "レア", "セット", "マスコット"]
+    attributes = ["フィギュア", "ガチャ", "フルコンプ", "レア", "セット", "マスコット"]
     selected_attribute = random.choice(attributes)
     keyword = f"スクイーズ {selected_attribute}"
     print(f"Searching Rakuten for keyword: {keyword}")
@@ -162,7 +162,7 @@ def generate_article_with_llm(item):
                 "https://text.pollinations.ai/",
                 json={
                     "messages": [
-                        {"role": "system", "content": "あなたはスクイーズ専門のコレクター兼紹介ブロガーです。指示された仕様に完全に従い、前置きやHTMLタグブロックのマークダウン表現などを含めない純粋なHTML本文のみを出力します。"},
+                        {"role": "system", "content": "あなたはスクイーズなどのホビー専門のコレクター兼紹介ブロガーです。指示された仕様に完全に従い、前置きやHTMLタグブロックのマークダウン表現などを含めない純粋なHTML本文のみを出力します。"},
                         {"role": "user", "content": prompt}
                     ],
                     "model": model
