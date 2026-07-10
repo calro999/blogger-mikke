@@ -157,3 +157,4 @@ project1-6:10009087
 shimataro:10000455
 auc-yuyou:10200540
 magnet-p01:10048722
+rakuten24:11415310
