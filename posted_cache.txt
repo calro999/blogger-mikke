@@ -164,3 +164,4 @@ monomi-no:10000372
 eirigoods:10000568
 union-stores:10009175
 needswants:10000458
+w-col:10037829
