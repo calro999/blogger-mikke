@@ -181,3 +181,4 @@ sanyodo-shop:10046744
 shimataro:10000150
 crasuppo:10114337
 haco:10002902
+vivito-shop:14222204
