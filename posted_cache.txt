@@ -178,3 +178,4 @@ tenyo-shop1:10000194
 asoraplus:10022822
 basicbag:10000467
 sanyodo-shop:10046744
+shimataro:10000150
