@@ -177,3 +177,4 @@ hobbyzakka-cha3:10007491
 tenyo-shop1:10000194
 asoraplus:10022822
 basicbag:10000467
+sanyodo-shop:10046744
