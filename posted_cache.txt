@@ -204,3 +204,4 @@ hiroland:10001021
 hiroland:10001020
 r-mart-plus:10021896
 amuskin:10012961
+vaps2shop:10010265
