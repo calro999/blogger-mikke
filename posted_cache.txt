@@ -224,3 +224,4 @@ netbaby:10054521
 olivegirls:10002343
 teiashopping:10006801
 ikedakogyosha-shop:10001003
+auc-yuyou:10210185
