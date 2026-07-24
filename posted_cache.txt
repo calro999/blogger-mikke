@@ -240,3 +240,4 @@ bellezzavoce:10010009
 a-afashion:10018568
 vaps:10189329
 milifestyle:10000141
+vaps2shop:10010860
