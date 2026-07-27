@@ -254,3 +254,4 @@ rol-shop:10031259
 snnm1015:10001952
 snnm1015:10001968
 c-lanlan:10034958
+kurashigakokoniaru:10000628
