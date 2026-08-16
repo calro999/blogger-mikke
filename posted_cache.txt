@@ -300,3 +300,4 @@ smart-park:10036172
 ifull:10000521
 lilyshouse:10012747
 yurifashion:10074051
+fuwaristyle:10000033
