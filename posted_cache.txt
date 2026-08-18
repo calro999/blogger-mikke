@@ -308,3 +308,4 @@ smart-park:10036311
 wasshoi-mura:10023825
 fuwaristyle:10000023
 wonderentrance1:10106433
+fuwaristyle:10000024
