@@ -313,3 +313,4 @@ palrun:10037418
 syousyafashion:10000862
 alice00:10005065
 hiliteshop:10031862
+kishi-gum:10030166
