@@ -321,3 +321,4 @@ smart-park:10036323
 akgshop:10019873
 iyasakaonrainsyoppu:10035121
 ifull:10000524
+shimataro:10000517
