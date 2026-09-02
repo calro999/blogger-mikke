@@ -337,3 +337,4 @@ rakuten24:11416411
 basicbag:10000588
 du-mit:10006515
 smart-park:10035909
+observations:10012951
