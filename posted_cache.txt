@@ -376,3 +376,4 @@ honohono-shop:10010053
 basicbag:10000505
 koguma-house:10000031
 basicbag:10000496
+palrun:10041164
