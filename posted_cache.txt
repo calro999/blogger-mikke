@@ -374,3 +374,4 @@ expsjapan:10032171
 alice00:10005183
 honohono-shop:10010053
 basicbag:10000505
+koguma-house:10000031
