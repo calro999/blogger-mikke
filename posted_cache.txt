@@ -384,3 +384,4 @@ mina-shop:10009202
 auc-ookawaya:10152030
 basicbag:10000552
 perfectworld-tokyo:10306010
+basicbag:10000590
