@@ -385,3 +385,4 @@ auc-ookawaya:10152030
 basicbag:10000552
 perfectworld-tokyo:10306010
 basicbag:10000590
+cinemacollection:10290060
