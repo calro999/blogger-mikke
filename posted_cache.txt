@@ -417,3 +417,4 @@ mizo-katsukyou-1988:10000010
 vivito2:11804472
 theenglishstore:10002381
 manetstore:10011775
+kikiplaza:10006413
