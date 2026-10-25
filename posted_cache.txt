@@ -420,3 +420,4 @@ manetstore:10011775
 kikiplaza:10006413
 bontan108:10074515
 ace-1224:10011131
+pop-mart-japan:10004265
