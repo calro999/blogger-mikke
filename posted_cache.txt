@@ -423,3 +423,4 @@ ace-1224:10011131
 pop-mart-japan:10004265
 hpy337:10012885
 hakuhakushop:10000140
+netshopkako:10005020
