@@ -493,3 +493,4 @@ vt-store:10010840
 fullout:10059671
 value-club:10010628
 basicbag:10000363
+aoi-depart:10062769
