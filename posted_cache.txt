@@ -530,3 +530,4 @@ shimataro:10000188
 auc-treasuremarket:10044244
 vaps2shop:10010992
 velkommen:10490363
+shizuya:10002238
