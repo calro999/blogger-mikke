@@ -528,3 +528,4 @@ auc-yuyou:10163714
 cinemacollection:10429426
 shimataro:10000188
 auc-treasuremarket:10044244
+vaps2shop:10010992
