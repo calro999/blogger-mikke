@@ -546,3 +546,4 @@ shimataro:10000214
 backyard:10369915
 r-mart-plus:10029115
 atelier-ayumi:10003948
+nishi-ryutu-2:10002132
