@@ -566,3 +566,4 @@ gosunwood:10008288
 wasshoi-mura:10025051
 kiseki-store:10018104
 rapites:10024478
+wasshoi-mura:10022893
